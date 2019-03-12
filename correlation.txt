@@ -1,0 +1,13 @@
+
+Encumbrance as a function of Virtuality
+coefficient of determination: 0.008968
+
+Encumbrance as a function of Activity
+coefficient of determination: 0.106140
+
+Activity as a function of Virtuality
+coefficient of determination: 0.130110
+
+No of games:  30
+
+-----------------------------------------------------------------------

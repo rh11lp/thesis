@@ -100,7 +100,7 @@ xVirtuality = VAEMatrix[:,0]
 yEncumbrence = VAEMatrix[:,1]
 zActivity = VAEMatrix[:,2]
 
-printLinReg =False
+printLinReg = False
 printDistance = True
 printStanDev = False
 
@@ -255,17 +255,23 @@ elif printDistance:
 	genreMatrix 		= np.array([averageAc, averageFa, averageGe, averageLo, averagePu, averageRa, averageRh, averageSc]) #, averageSl, averageSo])
 	print('Genre matrix: ')
 	print(genreMatrix)
-	
+	print('')
 	
 	
 	distanceVAE 		= distance.pdist(VAEMatrix)
 	distanceVAE			= distance.squareform(distanceVAE)
 	averageAll			= np.mean(distanceVAE)
-	print('All points distances average: ', averageAll)
+	print('All points distances average: ')
+	print(averageAll)
 	print('')
 	
-	print('Standard Deviation')
+	print('Standard Deviation between point average distances per genre: ')
 	PDstandardDeviation = ndimage.standard_deviation(genreMatrix)
+	print(PDstandardDeviation)
+	print('')
+	
+	print('Standard Deviation between overall point distance: ')
+	PDstandardDeviation = ndimage.standard_deviation(distanceVAE)
 	print(PDstandardDeviation)
 
 
@@ -275,7 +281,7 @@ elif printDistance:
 #======================STANDARD DEVIATION==================================================================================================================
 
 elif printStanDev:
-	print('Standard Deviation')
+	print('Standard Deviation: ')
 	standardDeviation = ndimage.standard_deviation(VAEMatrix)
 	print(standardDeviation)
 

@@ -1,0 +1,12 @@
+Genre matrix: 
+[2.69728717 2.         3.57936642 3.58329457 2.16511935 2.86851709
+ 2.84370962 3.34597282]
+
+All points distances average: 
+4.339669543693176
+
+Standard Deviation between point average distances per genre: 
+0.5613511030032697
+
+Standard Deviation between overall point distance: 
+2.8020947375505587

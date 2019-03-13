@@ -10,9 +10,9 @@ VAEMatrix = np.array([[8.6, 4, 10],		#BeatSaber
 					  [8.6, 4, 10],		#SuperHot
 					  [8.6, 4, 9],		#SkyrimVR
 					  [8.6, 4, 7],		#Moss
-					  [4.2, 4, 4],		#Somnai
+					  [4.2, 4, 4],		#Somnai*
 					  [1.4, 2, 3],		#Pokemon Go
-					  [7.1, 10, 10],	#Scary Girl 
+					  [7.1, 10, 10],	#Scary Girl*
 					  [8.6, 4.5, 10],	#Surgeon Simulator
 					  [8.6, 4.5, 10], 	#Lone Echo
 					  [7.1, 4.5, 7], 	#Keep Talking and Nobody Explodes
@@ -21,21 +21,21 @@ VAEMatrix = np.array([[8.6, 4, 10],		#BeatSaber
 					  [8.6, 3, 6], 		#Netflix VR
 					  [8.6, 4.5, 6], 	#Youtube VR
 					  [8.6, 4, 6], 		#Electronauts
-					  [8.6, 5.5, 1],	#Samsung Snowboard
+					  [8.6, 5.5, 1],	#Samsung Snowboard*
                       [8.6, 3.5, 10],   #Gorn
                       [8.6, 3.5, 8],    #Wipeout Omega
                       [8.6, 3.5, 5],    #Tetris Effect
                       [8.6, 3.5, 7],    #Werewolves Within
-                      [8.6, 3.5, 6],    #Tumper
+                      [8.6, 3.5, 6],    #Thumper
 					  [8.6, 3.5, 10],	#Eve Valkyrie
 					  [8.6, 3.5, 10],	#Sprint Vector
-					  [6.5, 6.5, 3],	#Birdly
-					  [8.6, 6.5, 8],	#Pro Race VR
-					  [8.6, 3.5, 7], 	#Time Travel VR
-					  [7.1, 10, 10],	#Amber Sky 2088
-					  [7.1, 8.5, 10],	#Arizona Sunshine
-					  [7.1, 7.5, 10],	#Ghostbusters Dimension
-					  [7.1, 10, 10]		#Dreamscape Immersive
+					  [6.5, 6.5, 3],	#Birdly*
+					  [8.6, 6.5, 8],	#Pro Race VR*
+					  [8.6, 3.5, 7], 	#Time Travel VR*
+					  [7.1, 10, 10],	#Amber Sky 2088*
+					  [7.1, 8.5, 10],	#Arizona Sunshine*
+					  [7.1, 7.5, 10],	#Ghostbusters Dimension*
+					  [7.1, 10, 10]		#Dreamscape Immersive*
 					  ])
 
 #SCIFI MATRIX					  
@@ -100,8 +100,8 @@ xVirtuality = VAEMatrix[:,0]
 yEncumbrence = VAEMatrix[:,1]
 zActivity = VAEMatrix[:,2]
 
-printLinReg = False
-printDistance = True
+printLinReg = True
+printDistance = False
 printStanDev = False
 
 
@@ -125,8 +125,6 @@ if printLinReg:
 	plt.ylabel("Encumbrance")
 	plt.xlabel("Virtuality")
 	plt.legend()
-
-
 
 	#E > A
 	EAslope, EAintercept, EAr_value, EAp_value, EAstd_err = stats.linregress(zActivity, yEncumbrence)
